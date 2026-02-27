@@ -1,30 +1,32 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
- int main()
- {
- 	int unit,bill;
- 	 cout<<"Enter the electricity bill consumption in units"<<endl;
- 	 cin>>unit;
- 	 if ( unit>0 && unit<100)
- 	 {
- 	 	bill = unit*15; 
-	  }
-	  else if  ( unit>100 && unit<200)
-	  {
-	  	bill=( ( 100*15)+ ( unit-100)*25);
-	  }else if( unit>200 && unit<300)
-	  {
-	  	bill= ((100*15) +  (100*25) +(unit-200 )*35);
-	  	
-	  }
-	  else 
-	  {
-	  	bill= ((100*15) +  (100*25) +(100*35) +(unit-300)*45);
-	  	
-	  }
 
-	  
-	  
-	  cout<<"Your fina bill is :"<<bill<<endl;
-	 return 0;
- }
+int main()
+{
+    int units;
+    int bill;
+
+    cout << "Enter the units consumption: " << endl;
+    cin >> units;
+
+    if (units <= 100)
+    {
+        bill = units * 15;
+    }
+    else if (units <= 200)
+    {
+        bill = (100 * 15) + (units - 100) * 25;
+    }
+    else if (units <= 300)
+    {
+        bill = (100 * 15) + (100 * 25) + (units - 200) * 35;
+    }
+    else
+    {
+        bill = (100 * 15) + (100 * 25) + (100 * 35) + (units - 300) * 45;
+    }
+
+    cout << "YOUR TOTAL BILL IS: " << bill << endl;
+
+    return 0;
+}
